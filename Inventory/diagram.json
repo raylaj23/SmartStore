@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "raileanul",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -3, "left": 89.2, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -28.8, "left": -139.16, "attrs": {} },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell1",
+      "top": 329,
+      "left": 492.2,
+      "attrs": { "type": "5kg" }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell2",
+      "top": -218.2,
+      "left": 511.4,
+      "attrs": { "type": "5kg" }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell3",
+      "top": 300.2,
+      "left": 137,
+      "attrs": { "type": "5kg" }
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "cell4",
+      "top": -266.2,
+      "left": 165.8,
+      "attrs": { "type": "5kg" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "bb1:tn.1", "black", [ "v0" ] ],
+    [ "cell4:GND", "bb1:tn.2", "black", [ "h0" ] ],
+    [ "cell4:VCC", "bb1:tp.3", "red", [ "h0" ] ],
+    [ "esp:3V3", "bb1:tp.1", "green", [ "h0" ] ],
+    [ "cell2:VCC", "bb1:tp.26", "red", [ "h-96", "v172.8" ] ],
+    [ "cell2:GND", "bb1:tn.27", "black", [ "h0" ] ],
+    [ "cell3:GND", "bb1:tn.6", "black", [ "h0" ] ],
+    [ "cell3:VCC", "bb1:tp.7", "red", [ "h0" ] ],
+    [ "cell1:GND", "bb1:tn.31", "black", [ "h0" ] ],
+    [ "cell1:VCC", "bb1:tp.32", "red", [ "h0" ] ],
+    [ "cell4:DT", "esp:23", "green", [ "h0" ] ],
+    [ "cell4:SCK", "esp:22", "green", [ "h0" ] ],
+    [ "cell2:DT", "esp:21", "green", [ "h0" ] ],
+    [ "cell2:SCK", "esp:19", "green", [ "h-441.6", "v95.2" ] ],
+    [ "cell3:DT", "esp:18", "green", [ "h-163.2", "v-250.1" ] ],
+    [ "cell3:SCK", "esp:5", "green", [ "h-124.8", "v-173.6" ] ],
+    [ "cell1:DT", "esp:17", "green", [ "h-441.6", "v-202.1" ] ],
+    [ "esp:16", "cell1:SCK", "green", [ "h115.2", "v144", "h67.2" ] ]
+  ],
+  "dependencies": {}
+}
