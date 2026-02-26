@@ -68,7 +68,7 @@ The firmware utilizes **FreeRTOS tasks** to ensure high responsiveness:
 
 ## Tech Stack
 
-- **Linguaj:** C/C++ (Arduino Framework)
+- **Language:** C/C++ (Arduino Framework)
 - **RTOS:** FreeRTOS
 - **Cloud:** Azure IoT Hub
 - **Protocol:** MQTT over TLS
@@ -80,7 +80,7 @@ The firmware utilizes **FreeRTOS tasks** to ensure high responsiveness:
 
 ---
 
-## etup & Installation
+## Setup & Installation
 
 1.  **Azure Configuration**: 
     - Create an IoT Hub and register two devices.
@@ -96,4 +96,4 @@ The firmware utilizes **FreeRTOS tasks** to ensure high responsiveness:
 ---
 
 ## Author
-**[raylaj23]** *Embedded Systems Developer | IoT Enthusiast*
+**[raylaj23]** *Computer Engineering Student | IoT Enthusiast*
